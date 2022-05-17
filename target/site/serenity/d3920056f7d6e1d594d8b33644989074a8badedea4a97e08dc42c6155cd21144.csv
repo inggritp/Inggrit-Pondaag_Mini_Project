@@ -1,5 +1,0 @@
-"Story","Title","Result","Date","Stability","Duration (s)"
-"Change item's quantity on my shopping cart","I add quantity of an item","SUCCESS","2022-05-17T16:06:50.2763547+07:00[Asia/Jakarta]","0.0","29.56"
-"Change item's quantity on my shopping cart","I reduce quantity of an item","SUCCESS","2022-05-17T16:07:21.6477419+07:00[Asia/Jakarta]","0.0","30.17"
-"Change item's quantity on my shopping cart","I remove the item in my shopping cart","SUCCESS","2022-05-17T16:07:54.6417618+07:00[Asia/Jakarta]","0.0","38.21"
-"Change item's quantity on my shopping cart","I click Bayar button on product page","SUCCESS","2022-05-17T16:08:34.6275101+07:00[Asia/Jakarta]","0.0","30.77"
