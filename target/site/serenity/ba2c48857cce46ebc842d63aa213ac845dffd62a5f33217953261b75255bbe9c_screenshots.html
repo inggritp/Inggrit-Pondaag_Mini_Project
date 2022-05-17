@@ -1,0 +1,377 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/font/bootstrap-icons.css"><!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.11.3/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.11.3/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.11.3/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle"></span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="736b1aa347ad0cc02b60562823f1ec2654d77d4dedca53e5400dc635edd55b88.html">Register</a></span>
+                > <span class="truncate-60"><a
+                    href="ba2c48857cce46ebc842d63aa213ac845dffd62a5f33217953261b75255bbe9c.html">Register </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 17-05-2022 16:11</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">Register </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                As a user<br />
+I should be able to create new account<br />
+So that i can do transactions
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Register
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Given I am on register page<br>When I input fullname "&lt;nama_lengkap&gt;"<br>And I input email "&lt;email&gt;"<br>And I input pass "&lt;password&gt;"<br>And click register button<br>Then I get the "&lt;result&gt;"</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="c90d416f89a57edc1d87ebe5454e02f8b3ea83905edd389a5c97ffd3bf9e7a49.png" title=" 1: Register ({nama_lengkap=Inggrit, email=new, password=Rosieeposie45, result=login_page})" width="1366"/>
+                <img src="c90d416f89a57edc1d87ebe5454e02f8b3ea83905edd389a5c97ffd3bf9e7a49.png" title=" Given I am on register page" width="1366"/>
+                <img src="c90d416f89a57edc1d87ebe5454e02f8b3ea83905edd389a5c97ffd3bf9e7a49.png" title=" Open regis URL" width="1366"/>
+                <img src="c90d416f89a57edc1d87ebe5454e02f8b3ea83905edd389a5c97ffd3bf9e7a49.png" title=" Given I am on register page (completed)" width="1366"/>
+                <img src="c90d416f89a57edc1d87ebe5454e02f8b3ea83905edd389a5c97ffd3bf9e7a49.png" title=" When I input fullname &quot;Inggrit&quot;" width="1366"/>
+                <img src="c90d416f89a57edc1d87ebe5454e02f8b3ea83905edd389a5c97ffd3bf9e7a49.png" title=" Input nama lengkap: Inggrit" width="1366"/>
+                <img src="68f841dbe84798f979751dec2f6b25374697a0ebc7282964480f30de4988b338.png" title=" Input nama lengkap: Inggrit (completed)" width="1366"/>
+                <img src="68f841dbe84798f979751dec2f6b25374697a0ebc7282964480f30de4988b338.png" title=" When I input fullname &quot;Inggrit&quot; (completed)" width="1366"/>
+                <img src="68f841dbe84798f979751dec2f6b25374697a0ebc7282964480f30de4988b338.png" title=" And I input email &quot;new&quot;" width="1366"/>
+                <img src="68f841dbe84798f979751dec2f6b25374697a0ebc7282964480f30de4988b338.png" title=" Input email for regist: new" width="1366"/>
+                <img src="bf9f89ed9f08587167900d322ba32f41180901d0c4b77c2eabb3fd9df05d49b8.png" title=" Input email for regist: new (completed)" width="1366"/>
+                <img src="bf9f89ed9f08587167900d322ba32f41180901d0c4b77c2eabb3fd9df05d49b8.png" title=" And I input email &quot;new&quot; (completed)" width="1366"/>
+                <img src="bf9f89ed9f08587167900d322ba32f41180901d0c4b77c2eabb3fd9df05d49b8.png" title=" And I input pass &quot;Rosieeposie45&quot;" width="1366"/>
+                <img src="bf9f89ed9f08587167900d322ba32f41180901d0c4b77c2eabb3fd9df05d49b8.png" title=" Input pass for regist: Rosieeposie45" width="1366"/>
+                <img src="f76ca6e18b1303fb24b5ffd9fdc4030cc11728b2501252e78da1931f3f6bbad9.png" title=" Input pass for regist: Rosieeposie45 (completed)" width="1366"/>
+                <img src="f76ca6e18b1303fb24b5ffd9fdc4030cc11728b2501252e78da1931f3f6bbad9.png" title=" And I input pass &quot;Rosieeposie45&quot; (completed)" width="1366"/>
+                <img src="f76ca6e18b1303fb24b5ffd9fdc4030cc11728b2501252e78da1931f3f6bbad9.png" title=" And click register button" width="1366"/>
+                <img src="f76ca6e18b1303fb24b5ffd9fdc4030cc11728b2501252e78da1931f3f6bbad9.png" title=" Click regis button" width="1366"/>
+                <img src="49a3ec3fe6e588bb357024d38ea075b8250cb5f32bd132770e4d40bc98d606c0.png" title=" Click regis button (completed)" width="1366"/>
+                <img src="49a3ec3fe6e588bb357024d38ea075b8250cb5f32bd132770e4d40bc98d606c0.png" title=" And click register button (completed)" width="1366"/>
+                <img src="49a3ec3fe6e588bb357024d38ea075b8250cb5f32bd132770e4d40bc98d606c0.png" title=" Then I get the &quot;login_page&quot;" width="1366"/>
+                <img src="49a3ec3fe6e588bb357024d38ea075b8250cb5f32bd132770e4d40bc98d606c0.png" title=" Open url" width="1366"/>
+                <img src="49a3ec3fe6e588bb357024d38ea075b8250cb5f32bd132770e4d40bc98d606c0.png" title=" Open url (completed)" width="1366"/>
+                <img src="49a3ec3fe6e588bb357024d38ea075b8250cb5f32bd132770e4d40bc98d606c0.png" title=" Then I get the &quot;login_page&quot; (completed)" width="1366"/>
+                <img src="49a3ec3fe6e588bb357024d38ea075b8250cb5f32bd132770e4d40bc98d606c0.png" title=" 1: Register ({nama_lengkap=Inggrit, email=new, password=Rosieeposie45, result=login_page}) (completed)" width="1366"/>
+                <img src="c90d416f89a57edc1d87ebe5454e02f8b3ea83905edd389a5c97ffd3bf9e7a49.png" title=" 2: Register ({nama_lengkap=Inggrit, email=pondaaginggrit1@gmail.com, password=Password3211, result=alert symbol})" width="1366"/>
+                <img src="c90d416f89a57edc1d87ebe5454e02f8b3ea83905edd389a5c97ffd3bf9e7a49.png" title=" Given I am on register page" width="1366"/>
+                <img src="c90d416f89a57edc1d87ebe5454e02f8b3ea83905edd389a5c97ffd3bf9e7a49.png" title=" Open regis URL" width="1366"/>
+                <img src="c90d416f89a57edc1d87ebe5454e02f8b3ea83905edd389a5c97ffd3bf9e7a49.png" title=" Given I am on register page (completed)" width="1366"/>
+                <img src="c90d416f89a57edc1d87ebe5454e02f8b3ea83905edd389a5c97ffd3bf9e7a49.png" title=" When I input fullname &quot;Inggrit&quot;" width="1366"/>
+                <img src="c90d416f89a57edc1d87ebe5454e02f8b3ea83905edd389a5c97ffd3bf9e7a49.png" title=" Input nama lengkap: Inggrit" width="1366"/>
+                <img src="88e0b4345bb34130c3fd9b545d11dd310d0f8fe272095c881ef72d9ac2744584.png" title=" Input nama lengkap: Inggrit (completed)" width="1366"/>
+                <img src="88e0b4345bb34130c3fd9b545d11dd310d0f8fe272095c881ef72d9ac2744584.png" title=" When I input fullname &quot;Inggrit&quot; (completed)" width="1366"/>
+                <img src="88e0b4345bb34130c3fd9b545d11dd310d0f8fe272095c881ef72d9ac2744584.png" title=" And I input email &quot;pondaaginggrit1@gmail.com&quot;" width="1366"/>
+                <img src="88e0b4345bb34130c3fd9b545d11dd310d0f8fe272095c881ef72d9ac2744584.png" title=" Input email for regist: pondaaginggrit1@gmail.com" width="1366"/>
+                <img src="c97b640ee47fd08e06547c05e5fec6fcb70c1b7d403bc26b28eca1406ba484e2.png" title=" Input email for regist: pondaaginggrit1@gmail.com (completed)" width="1366"/>
+                <img src="c97b640ee47fd08e06547c05e5fec6fcb70c1b7d403bc26b28eca1406ba484e2.png" title=" And I input email &quot;pondaaginggrit1@gmail.com&quot; (completed)" width="1366"/>
+                <img src="c97b640ee47fd08e06547c05e5fec6fcb70c1b7d403bc26b28eca1406ba484e2.png" title=" And I input pass &quot;Password3211&quot;" width="1366"/>
+                <img src="c97b640ee47fd08e06547c05e5fec6fcb70c1b7d403bc26b28eca1406ba484e2.png" title=" Input pass for regist: Password3211" width="1366"/>
+                <img src="af7abb0eb0aa5de1223f34498bfce0a9a0e0d2a8b6a39d12699c471f1c21910a.png" title=" Input pass for regist: Password3211 (completed)" width="1366"/>
+                <img src="af7abb0eb0aa5de1223f34498bfce0a9a0e0d2a8b6a39d12699c471f1c21910a.png" title=" And I input pass &quot;Password3211&quot; (completed)" width="1366"/>
+                <img src="af7abb0eb0aa5de1223f34498bfce0a9a0e0d2a8b6a39d12699c471f1c21910a.png" title=" And click register button" width="1366"/>
+                <img src="af7abb0eb0aa5de1223f34498bfce0a9a0e0d2a8b6a39d12699c471f1c21910a.png" title=" Click regis button" width="1366"/>
+                <img src="503bd0bc3c4f357efa7d6ba17a54883c9d6982e00daed4fc4888e851ed1158b2.png" title=" Click regis button (completed)" width="1366"/>
+                <img src="503bd0bc3c4f357efa7d6ba17a54883c9d6982e00daed4fc4888e851ed1158b2.png" title=" And click register button (completed)" width="1366"/>
+                <img src="503bd0bc3c4f357efa7d6ba17a54883c9d6982e00daed4fc4888e851ed1158b2.png" title=" Then I get the &quot;alert symbol&quot;" width="1366"/>
+                <img src="503bd0bc3c4f357efa7d6ba17a54883c9d6982e00daed4fc4888e851ed1158b2.png" title=" Alert symbol appears" width="1366"/>
+                <img src="db1917a24b19deabe6165eedd7b0b9606a401d3c3d33a84904bd44eedc5b3f27.png" title=" Alert symbol appears (completed)" width="1366"/>
+                <img src="db1917a24b19deabe6165eedd7b0b9606a401d3c3d33a84904bd44eedc5b3f27.png" title=" Then I get the &quot;alert symbol&quot; (completed)" width="1366"/>
+                <img src="db1917a24b19deabe6165eedd7b0b9606a401d3c3d33a84904bd44eedc5b3f27.png" title=" 2: Register ({nama_lengkap=Inggrit, email=pondaaginggrit1@gmail.com, password=Password3211, result=alert symbol}) (completed)" width="1366"/>
+                <img src="c90d416f89a57edc1d87ebe5454e02f8b3ea83905edd389a5c97ffd3bf9e7a49.png" title=" 3: Register ({nama_lengkap=, email=, password=, result=alert symbol})" width="1366"/>
+                <img src="c90d416f89a57edc1d87ebe5454e02f8b3ea83905edd389a5c97ffd3bf9e7a49.png" title=" Given I am on register page" width="1366"/>
+                <img src="c90d416f89a57edc1d87ebe5454e02f8b3ea83905edd389a5c97ffd3bf9e7a49.png" title=" Open regis URL" width="1366"/>
+                <img src="c90d416f89a57edc1d87ebe5454e02f8b3ea83905edd389a5c97ffd3bf9e7a49.png" title=" Given I am on register page (completed)" width="1366"/>
+                <img src="c90d416f89a57edc1d87ebe5454e02f8b3ea83905edd389a5c97ffd3bf9e7a49.png" title=" When I input fullname &quot;&quot;" width="1366"/>
+                <img src="c90d416f89a57edc1d87ebe5454e02f8b3ea83905edd389a5c97ffd3bf9e7a49.png" title=" Input nama lengkap: " width="1366"/>
+                <img src="69267ceb77c162e35e6e40fb20734903eb72d826348e18e022b1d391d78d7d09.png" title=" Input nama lengkap:  (completed)" width="1366"/>
+                <img src="69267ceb77c162e35e6e40fb20734903eb72d826348e18e022b1d391d78d7d09.png" title=" When I input fullname &quot;&quot; (completed)" width="1366"/>
+                <img src="69267ceb77c162e35e6e40fb20734903eb72d826348e18e022b1d391d78d7d09.png" title=" And I input email &quot;&quot;" width="1366"/>
+                <img src="69267ceb77c162e35e6e40fb20734903eb72d826348e18e022b1d391d78d7d09.png" title=" Input email for regist: " width="1366"/>
+                <img src="91ab5aa99d693c8d066117939a5a6dc77641235f663ee4fc53729d204d6a24e5.png" title=" Input email for regist:  (completed)" width="1366"/>
+                <img src="91ab5aa99d693c8d066117939a5a6dc77641235f663ee4fc53729d204d6a24e5.png" title=" And I input email &quot;&quot; (completed)" width="1366"/>
+                <img src="91ab5aa99d693c8d066117939a5a6dc77641235f663ee4fc53729d204d6a24e5.png" title=" And I input pass &quot;&quot;" width="1366"/>
+                <img src="91ab5aa99d693c8d066117939a5a6dc77641235f663ee4fc53729d204d6a24e5.png" title=" Input pass for regist: " width="1366"/>
+                <img src="693e7cde4a1fdd51151aa265fd7eb52da915b618bf13324512d56d8ee2719429.png" title=" Input pass for regist:  (completed)" width="1366"/>
+                <img src="693e7cde4a1fdd51151aa265fd7eb52da915b618bf13324512d56d8ee2719429.png" title=" And I input pass &quot;&quot; (completed)" width="1366"/>
+                <img src="693e7cde4a1fdd51151aa265fd7eb52da915b618bf13324512d56d8ee2719429.png" title=" And click register button" width="1366"/>
+                <img src="23436ea98be349cfd13c0be2691f92db9b602c8962cb1c5148203b80138290b0.png" title=" Click regis button" width="1366"/>
+                <img src="c46d2c483ecf1f86a5e51214b61a9384ea085d564a0d13d4f09f45a6e91b4473.png" title=" Click regis button (completed)" width="1366"/>
+                <img src="c46d2c483ecf1f86a5e51214b61a9384ea085d564a0d13d4f09f45a6e91b4473.png" title=" And click register button (completed)" width="1366"/>
+                <img src="c46d2c483ecf1f86a5e51214b61a9384ea085d564a0d13d4f09f45a6e91b4473.png" title=" Then I get the &quot;alert symbol&quot;" width="1366"/>
+                <img src="c46d2c483ecf1f86a5e51214b61a9384ea085d564a0d13d4f09f45a6e91b4473.png" title=" Alert symbol appears" width="1366"/>
+                <img src="1dd2db1d2100f2dac0259fe31ff7a28b2c36003660d8492f8cbac40fc1409e6f.png" title=" Alert symbol appears (completed)" width="1366"/>
+                <img src="1dd2db1d2100f2dac0259fe31ff7a28b2c36003660d8492f8cbac40fc1409e6f.png" title=" Then I get the &quot;alert symbol&quot; (completed)" width="1366"/>
+                <img src="1dd2db1d2100f2dac0259fe31ff7a28b2c36003660d8492f8cbac40fc1409e6f.png" title=" 3: Register ({nama_lengkap=, email=, password=, result=alert symbol}) (completed)" width="1366"/>
+                <img src="c90d416f89a57edc1d87ebe5454e02f8b3ea83905edd389a5c97ffd3bf9e7a49.png" title=" 4: Register ({nama_lengkap=, email=jichuuu@gmail.com, password=Halloo321, result=alert message: fullname is required})" width="1366"/>
+                <img src="c90d416f89a57edc1d87ebe5454e02f8b3ea83905edd389a5c97ffd3bf9e7a49.png" title=" Given I am on register page" width="1366"/>
+                <img src="c90d416f89a57edc1d87ebe5454e02f8b3ea83905edd389a5c97ffd3bf9e7a49.png" title=" Open regis URL" width="1366"/>
+                <img src="c90d416f89a57edc1d87ebe5454e02f8b3ea83905edd389a5c97ffd3bf9e7a49.png" title=" Given I am on register page (completed)" width="1366"/>
+                <img src="c90d416f89a57edc1d87ebe5454e02f8b3ea83905edd389a5c97ffd3bf9e7a49.png" title=" When I input fullname &quot;&quot;" width="1366"/>
+                <img src="c90d416f89a57edc1d87ebe5454e02f8b3ea83905edd389a5c97ffd3bf9e7a49.png" title=" Input nama lengkap: " width="1366"/>
+                <img src="eb0b0ae5f1159cf658ee6555599fc35fad3377c65fe5138fe8d08f7242df2d5a.png" title=" Input nama lengkap:  (completed)" width="1366"/>
+                <img src="eb0b0ae5f1159cf658ee6555599fc35fad3377c65fe5138fe8d08f7242df2d5a.png" title=" When I input fullname &quot;&quot; (completed)" width="1366"/>
+                <img src="eb0b0ae5f1159cf658ee6555599fc35fad3377c65fe5138fe8d08f7242df2d5a.png" title=" And I input email &quot;jichuuu@gmail.com&quot;" width="1366"/>
+                <img src="eb0b0ae5f1159cf658ee6555599fc35fad3377c65fe5138fe8d08f7242df2d5a.png" title=" Input email for regist: jichuuu@gmail.com" width="1366"/>
+                <img src="94845f223570e8f7476be8e79ae9a5c143ce827c3d786180635f733268cfdfcd.png" title=" Input email for regist: jichuuu@gmail.com (completed)" width="1366"/>
+                <img src="94845f223570e8f7476be8e79ae9a5c143ce827c3d786180635f733268cfdfcd.png" title=" And I input email &quot;jichuuu@gmail.com&quot; (completed)" width="1366"/>
+                <img src="94845f223570e8f7476be8e79ae9a5c143ce827c3d786180635f733268cfdfcd.png" title=" And I input pass &quot;Halloo321&quot;" width="1366"/>
+                <img src="94845f223570e8f7476be8e79ae9a5c143ce827c3d786180635f733268cfdfcd.png" title=" Input pass for regist: Halloo321" width="1366"/>
+                <img src="4333a2d9d106691dd1fb1599ea6d890b9b2cea93a1accb0a9a0a04007b8ff6dd.png" title=" Input pass for regist: Halloo321 (completed)" width="1366"/>
+                <img src="4333a2d9d106691dd1fb1599ea6d890b9b2cea93a1accb0a9a0a04007b8ff6dd.png" title=" And I input pass &quot;Halloo321&quot; (completed)" width="1366"/>
+                <img src="4333a2d9d106691dd1fb1599ea6d890b9b2cea93a1accb0a9a0a04007b8ff6dd.png" title=" And click register button" width="1366"/>
+                <img src="79c65e3a9e2477f4292d5bb804fa9079cfacd6274141d1a09057171437fee994.png" title=" Click regis button" width="1366"/>
+                <img src="d541077007d96526a026ffb34883f707220d5238773fc03e98889456c8853455.png" title=" Click regis button (completed)" width="1366"/>
+                <img src="d541077007d96526a026ffb34883f707220d5238773fc03e98889456c8853455.png" title=" And click register button (completed)" width="1366"/>
+                <img src="d541077007d96526a026ffb34883f707220d5238773fc03e98889456c8853455.png" title=" Then I get the &quot;alert message: fullname is required&quot;" width="1366"/>
+                <img src="d541077007d96526a026ffb34883f707220d5238773fc03e98889456c8853455.png" title=" Alert symbol appears" width="1366"/>
+                <img src="2c5bd899378fa8e4ffa421c28eafb1a5537a230188ad90f2ae84c248ffc74bc0.png" title=" Alert symbol appears (completed)" width="1366"/>
+                <img src="2c5bd899378fa8e4ffa421c28eafb1a5537a230188ad90f2ae84c248ffc74bc0.png" title=" Then I get the &quot;alert message: fullname is required&quot; (completed)" width="1366"/>
+                <img src="2c5bd899378fa8e4ffa421c28eafb1a5537a230188ad90f2ae84c248ffc74bc0.png" title=" 4: Register ({nama_lengkap=, email=jichuuu@gmail.com, password=Halloo321, result=alert message: fullname is required}) (completed)" width="1366"/>
+                <img src="c90d416f89a57edc1d87ebe5454e02f8b3ea83905edd389a5c97ffd3bf9e7a49.png" title=" 5: Register ({nama_lengkap=Kim Jisoo, email=, password=Halloo321, result=alert message: email is required})" width="1366"/>
+                <img src="c90d416f89a57edc1d87ebe5454e02f8b3ea83905edd389a5c97ffd3bf9e7a49.png" title=" Given I am on register page" width="1366"/>
+                <img src="c90d416f89a57edc1d87ebe5454e02f8b3ea83905edd389a5c97ffd3bf9e7a49.png" title=" Open regis URL" width="1366"/>
+                <img src="c90d416f89a57edc1d87ebe5454e02f8b3ea83905edd389a5c97ffd3bf9e7a49.png" title=" Given I am on register page (completed)" width="1366"/>
+                <img src="c90d416f89a57edc1d87ebe5454e02f8b3ea83905edd389a5c97ffd3bf9e7a49.png" title=" When I input fullname &quot;Kim Jisoo&quot;" width="1366"/>
+                <img src="c90d416f89a57edc1d87ebe5454e02f8b3ea83905edd389a5c97ffd3bf9e7a49.png" title=" Input nama lengkap: Kim Jisoo" width="1366"/>
+                <img src="dc032986c9eedfe921fbd2b9407832954763fd5a7b4561f61f31962e87351d60.png" title=" Input nama lengkap: Kim Jisoo (completed)" width="1366"/>
+                <img src="dc032986c9eedfe921fbd2b9407832954763fd5a7b4561f61f31962e87351d60.png" title=" When I input fullname &quot;Kim Jisoo&quot; (completed)" width="1366"/>
+                <img src="dc032986c9eedfe921fbd2b9407832954763fd5a7b4561f61f31962e87351d60.png" title=" And I input email &quot;&quot;" width="1366"/>
+                <img src="dc032986c9eedfe921fbd2b9407832954763fd5a7b4561f61f31962e87351d60.png" title=" Input email for regist: " width="1366"/>
+                <img src="7f0f048dd5adea51f0fc0f4e93320ec45889b4a81273d3714431472340bb402b.png" title=" Input email for regist:  (completed)" width="1366"/>
+                <img src="7f0f048dd5adea51f0fc0f4e93320ec45889b4a81273d3714431472340bb402b.png" title=" And I input email &quot;&quot; (completed)" width="1366"/>
+                <img src="7f0f048dd5adea51f0fc0f4e93320ec45889b4a81273d3714431472340bb402b.png" title=" And I input pass &quot;Halloo321&quot;" width="1366"/>
+                <img src="64a8ab7e130fe99db2c57853c01c95daa655f9a073f691a3fcd430314cb72797.png" title=" Input pass for regist: Halloo321" width="1366"/>
+                <img src="452128f782b025bfb2d045a0bd1ed4332050a8990ca97f656d1ddb2ce50f9e82.png" title=" Input pass for regist: Halloo321 (completed)" width="1366"/>
+                <img src="452128f782b025bfb2d045a0bd1ed4332050a8990ca97f656d1ddb2ce50f9e82.png" title=" And I input pass &quot;Halloo321&quot; (completed)" width="1366"/>
+                <img src="452128f782b025bfb2d045a0bd1ed4332050a8990ca97f656d1ddb2ce50f9e82.png" title=" And click register button" width="1366"/>
+                <img src="0ba56bc930cf7813a7f275a82b09f580fa5df274185c0bc34251ede80bd43e03.png" title=" Click regis button" width="1366"/>
+                <img src="bfb70bdaa68fb3ce1b22fe67a9182ea2193dace02315d1b4d32fcb71476a9dc6.png" title=" Click regis button (completed)" width="1366"/>
+                <img src="bfb70bdaa68fb3ce1b22fe67a9182ea2193dace02315d1b4d32fcb71476a9dc6.png" title=" And click register button (completed)" width="1366"/>
+                <img src="bfb70bdaa68fb3ce1b22fe67a9182ea2193dace02315d1b4d32fcb71476a9dc6.png" title=" Then I get the &quot;alert message: email is required&quot;" width="1366"/>
+                <img src="bfb70bdaa68fb3ce1b22fe67a9182ea2193dace02315d1b4d32fcb71476a9dc6.png" title=" Alert symbol appears" width="1366"/>
+                <img src="eac532be87a0e15a0df0ebd52471898d7f34c5710fe945bd470af500f0d46b34.png" title=" Alert symbol appears (completed)" width="1366"/>
+                <img src="eac532be87a0e15a0df0ebd52471898d7f34c5710fe945bd470af500f0d46b34.png" title=" Then I get the &quot;alert message: email is required&quot; (completed)" width="1366"/>
+                <img src="eac532be87a0e15a0df0ebd52471898d7f34c5710fe945bd470af500f0d46b34.png" title=" 5: Register ({nama_lengkap=Kim Jisoo, email=, password=Halloo321, result=alert message: email is required}) (completed)" width="1366"/>
+                <img src="c90d416f89a57edc1d87ebe5454e02f8b3ea83905edd389a5c97ffd3bf9e7a49.png" title=" 6: Register ({nama_lengkap=Kim Jisoo, email=jichuuu@gmail.com, password=, result=alert message: password is required})" width="1366"/>
+                <img src="c90d416f89a57edc1d87ebe5454e02f8b3ea83905edd389a5c97ffd3bf9e7a49.png" title=" Given I am on register page" width="1366"/>
+                <img src="c90d416f89a57edc1d87ebe5454e02f8b3ea83905edd389a5c97ffd3bf9e7a49.png" title=" Open regis URL" width="1366"/>
+                <img src="c90d416f89a57edc1d87ebe5454e02f8b3ea83905edd389a5c97ffd3bf9e7a49.png" title=" Given I am on register page (completed)" width="1366"/>
+                <img src="c90d416f89a57edc1d87ebe5454e02f8b3ea83905edd389a5c97ffd3bf9e7a49.png" title=" When I input fullname &quot;Kim Jisoo&quot;" width="1366"/>
+                <img src="c90d416f89a57edc1d87ebe5454e02f8b3ea83905edd389a5c97ffd3bf9e7a49.png" title=" Input nama lengkap: Kim Jisoo" width="1366"/>
+                <img src="b94843f5295db7436e382f7fb5978a572e4671b6bbe335e03c77a7394b8951dd.png" title=" Input nama lengkap: Kim Jisoo (completed)" width="1366"/>
+                <img src="b94843f5295db7436e382f7fb5978a572e4671b6bbe335e03c77a7394b8951dd.png" title=" When I input fullname &quot;Kim Jisoo&quot; (completed)" width="1366"/>
+                <img src="b94843f5295db7436e382f7fb5978a572e4671b6bbe335e03c77a7394b8951dd.png" title=" And I input email &quot;jichuuu@gmail.com&quot;" width="1366"/>
+                <img src="b94843f5295db7436e382f7fb5978a572e4671b6bbe335e03c77a7394b8951dd.png" title=" Input email for regist: jichuuu@gmail.com" width="1366"/>
+                <img src="f380766fa9fdcc7dec0740cce3959f091968da6ef53d6bb3b675ed9bff7635d1.png" title=" Input email for regist: jichuuu@gmail.com (completed)" width="1366"/>
+                <img src="f380766fa9fdcc7dec0740cce3959f091968da6ef53d6bb3b675ed9bff7635d1.png" title=" And I input email &quot;jichuuu@gmail.com&quot; (completed)" width="1366"/>
+                <img src="f380766fa9fdcc7dec0740cce3959f091968da6ef53d6bb3b675ed9bff7635d1.png" title=" And I input pass &quot;&quot;" width="1366"/>
+                <img src="f380766fa9fdcc7dec0740cce3959f091968da6ef53d6bb3b675ed9bff7635d1.png" title=" Input pass for regist: " width="1366"/>
+                <img src="bc511b106c17ca637f684ae22bd1ed00299b6e4619b9df047d07f26017d3dfdd.png" title=" Input pass for regist:  (completed)" width="1366"/>
+                <img src="bc511b106c17ca637f684ae22bd1ed00299b6e4619b9df047d07f26017d3dfdd.png" title=" And I input pass &quot;&quot; (completed)" width="1366"/>
+                <img src="bc511b106c17ca637f684ae22bd1ed00299b6e4619b9df047d07f26017d3dfdd.png" title=" And click register button" width="1366"/>
+                <img src="bc511b106c17ca637f684ae22bd1ed00299b6e4619b9df047d07f26017d3dfdd.png" title=" Click regis button" width="1366"/>
+                <img src="753bae761f5eb3a5458a594e1052f6a22340e20090adb61a77b19d6732382403.png" title=" Click regis button (completed)" width="1366"/>
+                <img src="753bae761f5eb3a5458a594e1052f6a22340e20090adb61a77b19d6732382403.png" title=" And click register button (completed)" width="1366"/>
+                <img src="753bae761f5eb3a5458a594e1052f6a22340e20090adb61a77b19d6732382403.png" title=" Then I get the &quot;alert message: password is required&quot;" width="1366"/>
+                <img src="753bae761f5eb3a5458a594e1052f6a22340e20090adb61a77b19d6732382403.png" title=" Alert symbol appears" width="1366"/>
+                <img src="3b29f9a40b7041fea9a241bc46a332498008561af390e7028701b8f0f2823d40.png" title=" Alert symbol appears (completed)" width="1366"/>
+                <img src="3b29f9a40b7041fea9a241bc46a332498008561af390e7028701b8f0f2823d40.png" title=" Then I get the &quot;alert message: password is required&quot; (completed)" width="1366"/>
+                <img src="3b29f9a40b7041fea9a241bc46a332498008561af390e7028701b8f0f2823d40.png" title=" 6: Register ({nama_lengkap=Kim Jisoo, email=jichuuu@gmail.com, password=, result=alert message: password is required}) (completed): <span class='success-color'>SUCCESS</span>" width="1366"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 3.2.1</span>
+</div>
+</body>
+</html>

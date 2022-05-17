@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="0" name="Product" skipped="0" tests="4" time="131.26" timestamp="2022-05-17 04:09:06"><testcase name="Buy first product"/><testcase name="Buy second product"/><testcase name="When i don't buy anything on product page"/><testcase name="Using category bar"/></testsuite>

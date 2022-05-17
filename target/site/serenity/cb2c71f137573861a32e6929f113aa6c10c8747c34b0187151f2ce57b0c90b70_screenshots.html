@@ -1,0 +1,340 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/font/bootstrap-icons.css"><!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.11.3/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.11.3/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.11.3/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle"></span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="eda9645ecea73214dea660b9d79f3beae2edb1bb1ee566a2476b38cd1d69a575.html">Login</a></span>
+                > <span class="truncate-60"><a
+                    href="cb2c71f137573861a32e6929f113aa6c10c8747c34b0187151f2ce57b0c90b70.html">Login </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 17-05-2022 16:03</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">Login </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                As a user<br />
+I have to be able to login<br />
+So that i can buy products
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Login
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Given I am on qa.alta.id login page<br>When I input "&lt;email&gt;"<br>And Input "&lt;password&gt;"<br>And Click login button<br>Then I get "&lt;result&gt;"</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="6b6563c13227ef0b70a26f8a845b86304c5ded2ac83324d4bda7e0f4416b9ac5.png" title=" 1: Login ({email=inggrit@gmail.com, password=Passwordtest321, result=product_page})" width="1366"/>
+                <img src="6b6563c13227ef0b70a26f8a845b86304c5ded2ac83324d4bda7e0f4416b9ac5.png" title=" Given I am on qa.alta.id login page" width="1366"/>
+                <img src="6b6563c13227ef0b70a26f8a845b86304c5ded2ac83324d4bda7e0f4416b9ac5.png" title=" Open url" width="1366"/>
+                <img src="6b6563c13227ef0b70a26f8a845b86304c5ded2ac83324d4bda7e0f4416b9ac5.png" title=" Given I am on qa.alta.id login page (completed)" width="1366"/>
+                <img src="6b6563c13227ef0b70a26f8a845b86304c5ded2ac83324d4bda7e0f4416b9ac5.png" title=" When I input &quot;inggrit@gmail.com&quot;" width="1366"/>
+                <img src="6b6563c13227ef0b70a26f8a845b86304c5ded2ac83324d4bda7e0f4416b9ac5.png" title=" Input email: inggrit@gmail.com" width="1366"/>
+                <img src="d96ed1a5ce38d050b6308117c4f9884edc5ba0f17d9aca6abc6a04e7115c9dee.png" title=" Input email: inggrit@gmail.com (completed)" width="1366"/>
+                <img src="d96ed1a5ce38d050b6308117c4f9884edc5ba0f17d9aca6abc6a04e7115c9dee.png" title=" When I input &quot;inggrit@gmail.com&quot; (completed)" width="1366"/>
+                <img src="d96ed1a5ce38d050b6308117c4f9884edc5ba0f17d9aca6abc6a04e7115c9dee.png" title=" And Input &quot;Passwordtest321&quot;" width="1366"/>
+                <img src="c6e2abba5ace299c1b0ea3abc88a2335f8af38d3cd922c31e9fdba84fd386284.png" title=" Input password: Passwordtest321" width="1366"/>
+                <img src="de755253c72014f776d3fd30d779b150e2e5783093fa56073b334693543ebbe4.png" title=" Input password: Passwordtest321 (completed)" width="1366"/>
+                <img src="de755253c72014f776d3fd30d779b150e2e5783093fa56073b334693543ebbe4.png" title=" And Input &quot;Passwordtest321&quot; (completed)" width="1366"/>
+                <img src="de755253c72014f776d3fd30d779b150e2e5783093fa56073b334693543ebbe4.png" title=" And Click login button" width="1366"/>
+                <img src="16164a5db08f580fe81b0b2ebf343555696f7ed684d9b5cd5fcc7b7caabf9b39.png" title=" Click login button" width="1366"/>
+                <img src="5cf5365b44de1eb7e25e8bfd684acd469df441bfc9ffa6df5d63ef113f1f88e8.png" title=" Click login button (completed)" width="1366"/>
+                <img src="5cf5365b44de1eb7e25e8bfd684acd469df441bfc9ffa6df5d63ef113f1f88e8.png" title=" And Click login button (completed)" width="1366"/>
+                <img src="5cf5365b44de1eb7e25e8bfd684acd469df441bfc9ffa6df5d63ef113f1f88e8.png" title=" Then I get &quot;product_page&quot;" width="1366"/>
+                <img src="5cf5365b44de1eb7e25e8bfd684acd469df441bfc9ffa6df5d63ef113f1f88e8.png" title=" Product name appears" width="1366"/>
+                <img src="5cf5365b44de1eb7e25e8bfd684acd469df441bfc9ffa6df5d63ef113f1f88e8.png" title=" Product name appears (completed)" width="1366"/>
+                <img src="5cf5365b44de1eb7e25e8bfd684acd469df441bfc9ffa6df5d63ef113f1f88e8.png" title=" Then I get &quot;product_page&quot; (completed)" width="1366"/>
+                <img src="5cf5365b44de1eb7e25e8bfd684acd469df441bfc9ffa6df5d63ef113f1f88e8.png" title=" 1: Login ({email=inggrit@gmail.com, password=Passwordtest321, result=product_page}) (completed)" width="1366"/>
+                <img src="6b6563c13227ef0b70a26f8a845b86304c5ded2ac83324d4bda7e0f4416b9ac5.png" title=" 2: Login ({email=rosieposieee@wpdork.com, password=Password123, result=Alert symbol: record not found})" width="1366"/>
+                <img src="6b6563c13227ef0b70a26f8a845b86304c5ded2ac83324d4bda7e0f4416b9ac5.png" title=" Given I am on qa.alta.id login page" width="1366"/>
+                <img src="6b6563c13227ef0b70a26f8a845b86304c5ded2ac83324d4bda7e0f4416b9ac5.png" title=" Open url" width="1366"/>
+                <img src="6b6563c13227ef0b70a26f8a845b86304c5ded2ac83324d4bda7e0f4416b9ac5.png" title=" Given I am on qa.alta.id login page (completed)" width="1366"/>
+                <img src="6b6563c13227ef0b70a26f8a845b86304c5ded2ac83324d4bda7e0f4416b9ac5.png" title=" When I input &quot;rosieposieee@wpdork.com&quot;" width="1366"/>
+                <img src="6b6563c13227ef0b70a26f8a845b86304c5ded2ac83324d4bda7e0f4416b9ac5.png" title=" Input email: rosieposieee@wpdork.com" width="1366"/>
+                <img src="c8f59af57475f9135f999eb1dd20949382e2ecaf7384d0f50db291726512da21.png" title=" Input email: rosieposieee@wpdork.com (completed)" width="1366"/>
+                <img src="c8f59af57475f9135f999eb1dd20949382e2ecaf7384d0f50db291726512da21.png" title=" When I input &quot;rosieposieee@wpdork.com&quot; (completed)" width="1366"/>
+                <img src="c8f59af57475f9135f999eb1dd20949382e2ecaf7384d0f50db291726512da21.png" title=" And Input &quot;Password123&quot;" width="1366"/>
+                <img src="c8f59af57475f9135f999eb1dd20949382e2ecaf7384d0f50db291726512da21.png" title=" Input password: Password123" width="1366"/>
+                <img src="a8cb2ad1d31594b827f15be817e93854b1c4796ba971fa5730373aabb3cad41b.png" title=" Input password: Password123 (completed)" width="1366"/>
+                <img src="a8cb2ad1d31594b827f15be817e93854b1c4796ba971fa5730373aabb3cad41b.png" title=" And Input &quot;Password123&quot; (completed)" width="1366"/>
+                <img src="a8cb2ad1d31594b827f15be817e93854b1c4796ba971fa5730373aabb3cad41b.png" title=" And Click login button" width="1366"/>
+                <img src="740951115cdcb33e51705c9c04978b9177c969b275052601beecbf93e0a81a43.png" title=" Click login button" width="1366"/>
+                <img src="8033d067d985f387f39dd4c2e14adb451d8ed96b7ce454eaf3434aeb211d1fae.png" title=" Click login button (completed)" width="1366"/>
+                <img src="8033d067d985f387f39dd4c2e14adb451d8ed96b7ce454eaf3434aeb211d1fae.png" title=" And Click login button (completed)" width="1366"/>
+                <img src="8033d067d985f387f39dd4c2e14adb451d8ed96b7ce454eaf3434aeb211d1fae.png" title=" Then I get &quot;Alert symbol: record not found&quot;" width="1366"/>
+                <img src="8033d067d985f387f39dd4c2e14adb451d8ed96b7ce454eaf3434aeb211d1fae.png" title=" Error message appears" width="1366"/>
+                <img src="8033d067d985f387f39dd4c2e14adb451d8ed96b7ce454eaf3434aeb211d1fae.png" title=" Error message appears (completed)" width="1366"/>
+                <img src="8033d067d985f387f39dd4c2e14adb451d8ed96b7ce454eaf3434aeb211d1fae.png" title=" Error message equals: Alert symbol: record not found" width="1366"/>
+                <img src="8033d067d985f387f39dd4c2e14adb451d8ed96b7ce454eaf3434aeb211d1fae.png" title=" Error message equals: Alert symbol: record not found (completed)" width="1366"/>
+                <img src="8033d067d985f387f39dd4c2e14adb451d8ed96b7ce454eaf3434aeb211d1fae.png" title=" Then I get &quot;Alert symbol: record not found&quot; (completed)" width="1366"/>
+                <img src="8033d067d985f387f39dd4c2e14adb451d8ed96b7ce454eaf3434aeb211d1fae.png" title=" 2: Login ({email=rosieposieee@wpdork.com, password=Password123, result=Alert symbol: record not found}) (completed)" width="1366"/>
+                <img src="6b6563c13227ef0b70a26f8a845b86304c5ded2ac83324d4bda7e0f4416b9ac5.png" title=" 3: Login ({email=pondaaginggrit1@gmail.com, password=, result=Alert message: password is required})" width="1366"/>
+                <img src="6b6563c13227ef0b70a26f8a845b86304c5ded2ac83324d4bda7e0f4416b9ac5.png" title=" Given I am on qa.alta.id login page" width="1366"/>
+                <img src="6b6563c13227ef0b70a26f8a845b86304c5ded2ac83324d4bda7e0f4416b9ac5.png" title=" Open url" width="1366"/>
+                <img src="6b6563c13227ef0b70a26f8a845b86304c5ded2ac83324d4bda7e0f4416b9ac5.png" title=" Given I am on qa.alta.id login page (completed)" width="1366"/>
+                <img src="6b6563c13227ef0b70a26f8a845b86304c5ded2ac83324d4bda7e0f4416b9ac5.png" title=" When I input &quot;pondaaginggrit1@gmail.com&quot;" width="1366"/>
+                <img src="6b6563c13227ef0b70a26f8a845b86304c5ded2ac83324d4bda7e0f4416b9ac5.png" title=" Input email: pondaaginggrit1@gmail.com" width="1366"/>
+                <img src="2478a102e65c3e42ee4c43c69429ef77568cb7d974adb58d2b173175b764f9db.png" title=" Input email: pondaaginggrit1@gmail.com (completed)" width="1366"/>
+                <img src="2478a102e65c3e42ee4c43c69429ef77568cb7d974adb58d2b173175b764f9db.png" title=" When I input &quot;pondaaginggrit1@gmail.com&quot; (completed)" width="1366"/>
+                <img src="2478a102e65c3e42ee4c43c69429ef77568cb7d974adb58d2b173175b764f9db.png" title=" And Input &quot;&quot;" width="1366"/>
+                <img src="2478a102e65c3e42ee4c43c69429ef77568cb7d974adb58d2b173175b764f9db.png" title=" Input password: " width="1366"/>
+                <img src="cdfd8fd7ac9f7ee0ff45fd14e038d5a0797a66e597d4f4e3f5fb9f57399466ea.png" title=" Input password:  (completed)" width="1366"/>
+                <img src="cdfd8fd7ac9f7ee0ff45fd14e038d5a0797a66e597d4f4e3f5fb9f57399466ea.png" title=" And Input &quot;&quot; (completed)" width="1366"/>
+                <img src="cdfd8fd7ac9f7ee0ff45fd14e038d5a0797a66e597d4f4e3f5fb9f57399466ea.png" title=" And Click login button" width="1366"/>
+                <img src="351fe16c024178e0193727e0fb9567d76c794afec712570108135b9e6fc5ded6.png" title=" Click login button" width="1366"/>
+                <img src="3374d11e0c9e99c00f32713289db89f281bf4a594eac3e4355b03ac053b29519.png" title=" Click login button (completed)" width="1366"/>
+                <img src="3374d11e0c9e99c00f32713289db89f281bf4a594eac3e4355b03ac053b29519.png" title=" And Click login button (completed)" width="1366"/>
+                <img src="3374d11e0c9e99c00f32713289db89f281bf4a594eac3e4355b03ac053b29519.png" title=" Then I get &quot;Alert message: password is required&quot;" width="1366"/>
+                <img src="3374d11e0c9e99c00f32713289db89f281bf4a594eac3e4355b03ac053b29519.png" title=" Error message appears" width="1366"/>
+                <img src="3374d11e0c9e99c00f32713289db89f281bf4a594eac3e4355b03ac053b29519.png" title=" Error message appears (completed)" width="1366"/>
+                <img src="3374d11e0c9e99c00f32713289db89f281bf4a594eac3e4355b03ac053b29519.png" title=" Error message equals: Alert message: password is required" width="1366"/>
+                <img src="3374d11e0c9e99c00f32713289db89f281bf4a594eac3e4355b03ac053b29519.png" title=" Error message equals: Alert message: password is required (completed)" width="1366"/>
+                <img src="3374d11e0c9e99c00f32713289db89f281bf4a594eac3e4355b03ac053b29519.png" title=" Then I get &quot;Alert message: password is required&quot; (completed)" width="1366"/>
+                <img src="3374d11e0c9e99c00f32713289db89f281bf4a594eac3e4355b03ac053b29519.png" title=" 3: Login ({email=pondaaginggrit1@gmail.com, password=, result=Alert message: password is required}) (completed)" width="1366"/>
+                <img src="6b6563c13227ef0b70a26f8a845b86304c5ded2ac83324d4bda7e0f4416b9ac5.png" title=" 4: Login ({email=, password=, result=Alert message: email is required})" width="1366"/>
+                <img src="6b6563c13227ef0b70a26f8a845b86304c5ded2ac83324d4bda7e0f4416b9ac5.png" title=" Given I am on qa.alta.id login page" width="1366"/>
+                <img src="6b6563c13227ef0b70a26f8a845b86304c5ded2ac83324d4bda7e0f4416b9ac5.png" title=" Open url" width="1366"/>
+                <img src="6b6563c13227ef0b70a26f8a845b86304c5ded2ac83324d4bda7e0f4416b9ac5.png" title=" Given I am on qa.alta.id login page (completed)" width="1366"/>
+                <img src="6b6563c13227ef0b70a26f8a845b86304c5ded2ac83324d4bda7e0f4416b9ac5.png" title=" When I input &quot;&quot;" width="1366"/>
+                <img src="6b6563c13227ef0b70a26f8a845b86304c5ded2ac83324d4bda7e0f4416b9ac5.png" title=" Input email: " width="1366"/>
+                <img src="15234c85212788ea1a41af23371cd803d1d3b5936a5eabb1df8fabc6c75e999e.png" title=" Input email:  (completed)" width="1366"/>
+                <img src="15234c85212788ea1a41af23371cd803d1d3b5936a5eabb1df8fabc6c75e999e.png" title=" When I input &quot;&quot; (completed)" width="1366"/>
+                <img src="15234c85212788ea1a41af23371cd803d1d3b5936a5eabb1df8fabc6c75e999e.png" title=" And Input &quot;&quot;" width="1366"/>
+                <img src="06fec2ed405d399180305116ee773c892aae00959132fcb037d586085700a23e.png" title=" Input password: " width="1366"/>
+                <img src="29254aadc0bd3f6be9cc93d35ffa2c9b54f098cb99a37d1492885c7b4a4c0c38.png" title=" Input password:  (completed)" width="1366"/>
+                <img src="29254aadc0bd3f6be9cc93d35ffa2c9b54f098cb99a37d1492885c7b4a4c0c38.png" title=" And Input &quot;&quot; (completed)" width="1366"/>
+                <img src="29254aadc0bd3f6be9cc93d35ffa2c9b54f098cb99a37d1492885c7b4a4c0c38.png" title=" And Click login button" width="1366"/>
+                <img src="ec437e951d8c9b32aa0e712351711379cf3dbb6652bad28a80ea700a555e5e04.png" title=" Click login button" width="1366"/>
+                <img src="df27b848cd82c3b11a2f6ab9545fb58ff98b931c9af63e572b79798077fc615a.png" title=" Click login button (completed)" width="1366"/>
+                <img src="df27b848cd82c3b11a2f6ab9545fb58ff98b931c9af63e572b79798077fc615a.png" title=" And Click login button (completed)" width="1366"/>
+                <img src="df27b848cd82c3b11a2f6ab9545fb58ff98b931c9af63e572b79798077fc615a.png" title=" Then I get &quot;Alert message: email is required&quot;" width="1366"/>
+                <img src="df27b848cd82c3b11a2f6ab9545fb58ff98b931c9af63e572b79798077fc615a.png" title=" Error message appears" width="1366"/>
+                <img src="e3f563bdc0aafc81c0b9dccad0a820738abe276d392ea24cf0aa2f5bcc7ad22e.png" title=" Error message appears (completed)" width="1366"/>
+                <img src="e3f563bdc0aafc81c0b9dccad0a820738abe276d392ea24cf0aa2f5bcc7ad22e.png" title=" Error message equals: Alert message: email is required" width="1366"/>
+                <img src="e3f563bdc0aafc81c0b9dccad0a820738abe276d392ea24cf0aa2f5bcc7ad22e.png" title=" Error message equals: Alert message: email is required (completed)" width="1366"/>
+                <img src="e3f563bdc0aafc81c0b9dccad0a820738abe276d392ea24cf0aa2f5bcc7ad22e.png" title=" Then I get &quot;Alert message: email is required&quot; (completed)" width="1366"/>
+                <img src="e3f563bdc0aafc81c0b9dccad0a820738abe276d392ea24cf0aa2f5bcc7ad22e.png" title=" 4: Login ({email=, password=, result=Alert message: email is required}) (completed)" width="1366"/>
+                <img src="6b6563c13227ef0b70a26f8a845b86304c5ded2ac83324d4bda7e0f4416b9ac5.png" title=" 5: Login ({email=pondaaginggrit1@gmail.com, password=Password4444, result=Alert message: email or password is invalid})" width="1366"/>
+                <img src="6b6563c13227ef0b70a26f8a845b86304c5ded2ac83324d4bda7e0f4416b9ac5.png" title=" Given I am on qa.alta.id login page" width="1366"/>
+                <img src="6b6563c13227ef0b70a26f8a845b86304c5ded2ac83324d4bda7e0f4416b9ac5.png" title=" Open url" width="1366"/>
+                <img src="6b6563c13227ef0b70a26f8a845b86304c5ded2ac83324d4bda7e0f4416b9ac5.png" title=" Given I am on qa.alta.id login page (completed)" width="1366"/>
+                <img src="6b6563c13227ef0b70a26f8a845b86304c5ded2ac83324d4bda7e0f4416b9ac5.png" title=" When I input &quot;pondaaginggrit1@gmail.com&quot;" width="1366"/>
+                <img src="6b6563c13227ef0b70a26f8a845b86304c5ded2ac83324d4bda7e0f4416b9ac5.png" title=" Input email: pondaaginggrit1@gmail.com" width="1366"/>
+                <img src="e7c83625db37892194b9249a400869bf2ff1c16372169beecb92dc04d872d4cb.png" title=" Input email: pondaaginggrit1@gmail.com (completed)" width="1366"/>
+                <img src="e7c83625db37892194b9249a400869bf2ff1c16372169beecb92dc04d872d4cb.png" title=" When I input &quot;pondaaginggrit1@gmail.com&quot; (completed)" width="1366"/>
+                <img src="e7c83625db37892194b9249a400869bf2ff1c16372169beecb92dc04d872d4cb.png" title=" And Input &quot;Password4444&quot;" width="1366"/>
+                <img src="e7c83625db37892194b9249a400869bf2ff1c16372169beecb92dc04d872d4cb.png" title=" Input password: Password4444" width="1366"/>
+                <img src="8939c8d25bcba9b095ffd3717a09eadc1ba3a48181cdbd613adcc6eb5810e41d.png" title=" Input password: Password4444 (completed)" width="1366"/>
+                <img src="8939c8d25bcba9b095ffd3717a09eadc1ba3a48181cdbd613adcc6eb5810e41d.png" title=" And Input &quot;Password4444&quot; (completed)" width="1366"/>
+                <img src="8939c8d25bcba9b095ffd3717a09eadc1ba3a48181cdbd613adcc6eb5810e41d.png" title=" And Click login button" width="1366"/>
+                <img src="2022b2426a23bc3d5afa9617a33a469c4161baec2f028257df9006087802b34c.png" title=" Click login button" width="1366"/>
+                <img src="1e112cc500ceaebe7606c34d6d9064ef661e4841c977528a3f78abfdf560d515.png" title=" Click login button (completed)" width="1366"/>
+                <img src="1e112cc500ceaebe7606c34d6d9064ef661e4841c977528a3f78abfdf560d515.png" title=" And Click login button (completed)" width="1366"/>
+                <img src="1e112cc500ceaebe7606c34d6d9064ef661e4841c977528a3f78abfdf560d515.png" title=" Then I get &quot;Alert message: email or password is invalid&quot;" width="1366"/>
+                <img src="1e112cc500ceaebe7606c34d6d9064ef661e4841c977528a3f78abfdf560d515.png" title=" Error message appears" width="1366"/>
+                <img src="bb353f1f68cdc1b08daf7d3c8a345b7d44e484bcadf2e0297aae4cc96d629ebe.png" title=" Error message appears (completed)" width="1366"/>
+                <img src="bb353f1f68cdc1b08daf7d3c8a345b7d44e484bcadf2e0297aae4cc96d629ebe.png" title=" Error message equals: Alert message: email or password is invalid" width="1366"/>
+                <img src="bb353f1f68cdc1b08daf7d3c8a345b7d44e484bcadf2e0297aae4cc96d629ebe.png" title=" Error message equals: Alert message: email or password is invalid (completed)" width="1366"/>
+                <img src="bb353f1f68cdc1b08daf7d3c8a345b7d44e484bcadf2e0297aae4cc96d629ebe.png" title=" Then I get &quot;Alert message: email or password is invalid&quot; (completed)" width="1366"/>
+                <img src="bb353f1f68cdc1b08daf7d3c8a345b7d44e484bcadf2e0297aae4cc96d629ebe.png" title=" 5: Login ({email=pondaaginggrit1@gmail.com, password=Password4444, result=Alert message: email or password is invalid}) (completed): <span class='success-color'>SUCCESS</span>" width="1366"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 3.2.1</span>
+</div>
+</body>
+</html>
