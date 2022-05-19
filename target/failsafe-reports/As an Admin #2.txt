@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: As an Admin #2
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 23.533 s - in As an Admin #2
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 114.065 s - in As an Admin #2

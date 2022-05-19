@@ -1,4 +1,4 @@
-Feature: Categories
+Feature: Categories Module
   As an admin
   I should be able to access categories
   So that i can see all the categories and

@@ -1,4 +1,4 @@
-Feature: As an admin
+Feature: Login in Authentication Module
   I should be able to login
   So that I can do other requests
 

@@ -1,1 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="Categories" skipped="0" tests="2" time="21.35" timestamp="2022-05-17 08:23:30"><testcase name="GET- Get all Categories"/><testcase name="POST - Create Category"/></testsuite>
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="Categories" skipped="0" tests="2" time="92.56" timestamp="2022-05-18 08:43:00"><testcase name="GET- Get all Categories"/><testcase name="POST - Create Category"/></testsuite>

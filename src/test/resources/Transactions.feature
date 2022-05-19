@@ -1,4 +1,4 @@
-Feature: As an Admin
+Feature: Transactions Module
   I should be able to access  in Transactions
   So that i can see and create order
 

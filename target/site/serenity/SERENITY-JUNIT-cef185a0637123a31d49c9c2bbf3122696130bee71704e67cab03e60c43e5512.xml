@@ -1,1 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="As An admin" skipped="0" tests="3" time="22.36" timestamp="2022-05-17 08:23:30"><testcase name="GET - All Products"/><testcase name="POST - Create Product"/><testcase name="GET - Product by ID"/></testsuite>
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="As An admin" skipped="0" tests="3" time="93.68" timestamp="2022-05-18 08:43:01"><testcase name="GET - All Products"/><testcase name="POST - Create Product"/><testcase name="GET - Product by ID"/></testsuite>

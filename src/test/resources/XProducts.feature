@@ -1,4 +1,4 @@
-Feature: As An admin
+Feature: Products Module
   I should be able to access products
   So that i can see and create new products
 

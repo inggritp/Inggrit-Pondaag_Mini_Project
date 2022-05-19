@@ -16,7 +16,7 @@ public class Comment_GET {
     private String base_url = "https://be-qa.alta.id/api";
 
     public String getCommentEndPoint(){
-        return base_url + "/products/{id}/comments";
+        return base_url + "/products/2242/comments";
     }
 
     public void sendGetCommentRequest() throws Exception{
@@ -26,7 +26,8 @@ public class Comment_GET {
         this.token = FileUtils.readFileToString(new File(System.getProperty("user.dir") + "/src/test/resources/filejson/token.json"),
                 StandardCharsets.UTF_8);
 
-        given().pathParam("id",id)
+//        given().pathParam("id",id)
+        given()
                 .header("Authorization","Bearer " + this.token)
                 .header("Content-Type","application/json")
                 .when().get(getCommentEndPoint());

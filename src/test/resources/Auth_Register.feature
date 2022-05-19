@@ -1,4 +1,4 @@
-Feature: As an Admin
+Feature: Regist in Authentication Module
   I should be able to create new user
   So that i can use other features
 

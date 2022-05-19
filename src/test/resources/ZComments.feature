@@ -1,4 +1,4 @@
-Feature: As an Admin
+Feature: Comments Module
   I should be able to access comments
   So that i can write comment to a product and
   get comments of the product

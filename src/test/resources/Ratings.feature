@@ -1,4 +1,4 @@
-Feature: As an Admin
+Feature: Ratings Module
   I should be able to
   See product's ratings and
   Give ratings to a product
